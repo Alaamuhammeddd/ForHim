@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <script src="script.js"></script> -->
+  </head>
+  <body>
+    <div class="imgcontainer">
+      <img class="mainImg" src="giphy.gif" width="400px" />
+      <img class="hoverImg" src="giphy3.gif" width="400px" />
+    </div>
+
+    <label>Will you be mine forever?</label>
+    <div class="btn-wrapper">
+      <a href="yesPage.html"> <button>Yes</button></a>
+      <button
+        class="noButton"
+        onmouseover="sadgif()"
+        onmouseout="resetImages()"
+      >
+        No
+      </button>
+      <script>
+        function sadgif() {
+          var mainImg = document.querySelector(".mainImg");
+          var hoverImg = document.querySelector(".hoverImg");
+          mainImg.style.display = "none";
+          hoverImg.style.display = "inline-block";
+        }
+        function resetImages() {
+          var mainImg = document.querySelector(".mainImg");
+          var hoverImg = document.querySelector(".hoverImg");
+          mainImg.style.display = "inline-block";
+          hoverImg.style.display = "none";
+        }
+      </script>
+    </div>
+  </body>
+</html>
